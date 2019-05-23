@@ -15,6 +15,7 @@ Code for website to randomize and sort substitute for a primary from a GoogleShe
     <li>Name your project</li>
     <li>Click "Create" to create the project</li>
     <li>Select project from the dropdown menu at the top of the page after it is created</li>
+    <li>Enable Google Sheets API for the project</li>
   </ul>
   <li>Create a service account to authenticate interaction with the Google Sheets</li>
   <ul>
