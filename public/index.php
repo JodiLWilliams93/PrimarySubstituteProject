@@ -11,7 +11,7 @@
         Generate Substitute List
     </h1><!-- end .heading-title -->
     <div class="flex-center">
-        <form action="display.php" method="get">
+        <form action="display.php" method="post">
             <div class="form-group" id="date-field" >
                 <label for="date">Select the date you need a substitute</label>
                 <input type="date" name="date" id="date">

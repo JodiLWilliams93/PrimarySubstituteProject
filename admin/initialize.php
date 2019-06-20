@@ -13,7 +13,7 @@
         
         //find user classes
         if(preg_match('/\A\w+\Z/', $class)){
-            include ADMIN . '\classes/' . $class . '.class.php';
+            include 'classes/' . $class . '.class.php';
         }
     }
     
@@ -25,8 +25,9 @@
 
     //create sheet object include the spreadsheetID, sheetName, and keys-column names
     $sheet = createSheet(array(
+        // 'spreadsheetID' => '1_nW_uRH3nmsnZ-zTlgYCYrjN_Kf2G_y1cnu4J5Ph78E',
         'spreadsheetID' => '1IeYRgbUF6GuWo8B7oXDa1wEYiSjzkrP6iZOLeaj0YiY',
-        'sheetName' => 'Master',
+        'sheetName' => 'Responses',
         'keys' => ['timestamp', 'name', 'gender', 'oddSundays', 'evenSundays', 'willing', 'contact', 'phone', 'email', 'lastSubbed']
     ));
 

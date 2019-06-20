@@ -20,6 +20,10 @@ h1 {
     margin-top: 0;
 }
 
+button {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
 /*==========================Flex==========================*/
 
 .flex-sb {
@@ -215,6 +219,7 @@ option {
 
 .extra-info {
     padding: 2%;
+    width: 100%;
 }
 
 img {

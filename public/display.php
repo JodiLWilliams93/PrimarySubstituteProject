@@ -6,11 +6,11 @@
     loggedIn($page); //check if loggedIn
     
     //set gender and type
-    $gender = $_GET['gender'] ?? '';
-    $type = $_GET['type'] ?? '';
+    $gender = $_POST['gender'] ?? '';
+    $type = $_POST['type'] ?? '';
     
     //get the date submitted
-    $submitted = date('Y-m-d', strtotime($_GET['date']));
+    $submitted = date('Y-m-d', strtotime($_POST['date']));
     //get today's date
     $today = date('Y-m-d', time());
     //get next Sunday's date
