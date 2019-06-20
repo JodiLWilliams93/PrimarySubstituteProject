@@ -15,6 +15,7 @@ Code for website to randomize and sort substitute for a primary from a GoogleShe
     <li>Name your project</li>
     <li>Click "Create" to create the project</li>
     <li>Select project from the dropdown menu at the top of the page after it is created</li>
+    <li>Enable Google Sheets API for the project</li>
   </ul>
   <li>Create a service account to authenticate interaction with the Google Sheets</li>
   <ul>
@@ -42,5 +43,6 @@ Code for website to randomize and sort substitute for a primary from a GoogleShe
     </ul>
   <li>Customize form checking and error messages in /public/assets/js/form.js</li>
   <li>Password information can be found on /public/login.php</li>
+  <li>Customize information for your site: in /public/login.php change "Xth ward" to your ward, in /public/display.php change contact information for who to contact if a sub can't be found.</li>
   
     
