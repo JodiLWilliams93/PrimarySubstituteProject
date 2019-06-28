@@ -15,8 +15,9 @@
             <div class="form-group" id="date-field" >
                 <label for="date">Select the date you need a substitute</label>
                 <input type="date" name="date" id="date">
-                <p class="error sunday-error show">*Date must be a Sunday</p>
                 <p class="error blank-error show">*Select a Date</p>
+                <p class="error format-error show">*Enter a date in the form MM/DD/YYYY</p>
+                <p class="error sunday-error show">*Date must be a Sunday</p>
                 <p class="error future-error show">*Sunday must be after today</p>
             </div><!-- end .form-group -->
             <div class="form-group" id="type-field">

@@ -35,10 +35,26 @@ $(document).ready(function() {
     }); //end select.change
 
     $("#date").change(function(){
-        //create a date object with the value selected in the date field.
-        var date = new Date($(this).val());
+        var value = $(this).val();
+        var regex = new RegExp('[0-9]{4}-[0-9]{2}-[0-9]{2}'); //regex for date from browsers supporting date type
+        var regex1 = new RegExp('([0-9]{1,2}/){2}[0-9]{4}'); //regex for date from browsers treating date as text
+        if (isBlank('#date')) {// make sure date has a value
+            $("#date-field").children(".blank-error").show(); 
+        }
+        if (regex.test(value)) { //create date using appropriate pieces from regex
+            var parts = value.split('-');
+            var date = new Date(parts[0], parts[1]-1, parts[2]);
+            $("#date-field").children(".format-error").hide();
+        } else if (regex1.test(value)) {
+            var parts = value.split('/');
+            var date = new Date(parts[2], parts[0]-1, parts[1]);
+            $("#date-field").children(".format-error").hide();
+        }else { //date doesn't match regex expression, display format error message
+            $("#date-field").children(".format-error").show(); 
+
+        }
         isFuture(date); //make sure the date is in the future
-        if(date.getDay() != 6) {
+        if(date.getDay() != 0) {
             //show Sunday error message if the date is not a Sunday
             $("#date-field").children(".sunday-error").show();
         } else {
